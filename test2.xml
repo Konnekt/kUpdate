@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<update><sections>
+  <section name="A"><info>aaa</info>
+    <pack name="Ap" type="gz">
+     <file name="1.exe"/>
+     <file name="2.exe"/>
+    </pack>
+    <section name="As"><info>bbb</info>
+      <pack name="Asp1" type="zip" single="1"/>
+      <pack name="Asp2" type="zip" single="1"/>
+    </section>
+  </section>
+
+  <section name="B"><info>ccc</info>
+    <pack name="Bp" type="zip" single="1" new="1">
+     <info>ddd</info>
+    </pack>
+    <pack name="B2p" type="gz">
+     <file name="3.exe"/>
+    </pack>
+  </section>
+
+</sections></update>

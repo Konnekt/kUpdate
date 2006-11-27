@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<update><date>2003-05-20 15:02</date><dlURL>http://test.konnekt.info/updater/dlpack.php?sectionPath=%sectionpath%&amp;pack=%pack%&amp;file=%file%</dlURL><sections>
+  <section name="sKonnekt" title="Konnekt 0.6.17.98"><info>Podstawowe pliki</info>
+    <pack name="UPD" title="" url="" hidden="1" required="1" type="" new="1">
+     <file name="upd.exe" date="1053435435" version="268435456" size="48640"/>
+    </pack>
+    <pack name="k_konnekt" title="Program" url="" required="1" type="gz">
+     <file name="konnekt.exe" date="1052948827" version="6361186" size="117780"/>
+    </pack>
+    <pack name="k_ui" title="Interfejs" url="" required="1" type="gz">
+     <file name="ui.dll" date="1052949729" version="1114112" size="246454"/>
+    </pack>
+    <pack name="k_update" title="Update" url="" required="1" type="gz">
+     <file name="plugins/update.dll" date="1046044258" version="269484032" size="37503"/>
+    </pack>
+    <pack name="k_doc" title="Dokumentacja" url="" depends="k_doc_img" type="zip" single="1" size="14107">
+     <file name="changelog.txt" date="1052931151"/>
+     <file name="doc\index.html" date="1046953524"/>
+     <file name="doc\roadmap.html" date="1046037872"/>
+     <file name="doc\szybka pomoc.html" date="1045965534"/>
+     <file name="readme.txt" date="1046039512"/>
+     <file name="temp\temp.txt" date="1040564748"/>
+    </pack>
+    <pack name="k_doc_img" title="Dokumentacja - grafika" url="" hidden="1" type="zip" single="1" size="215592">
+     <file name="doc\img\logo.gif" date="1045931014"/>
+     <file name="doc\img\roadmap.gif" date="1046044572"/>
+     <file name="doc\img\step_00.gif" date="1045923526"/>
+     <file name="doc\img\step_01.gif" date="1045922440"/>
+     <file name="doc\img\step_02.gif" date="1045922466"/>
+     <file name="doc\img\step_03.gif" date="1045922494"/>
+     <file name="doc\img\step_04.gif" date="1045922514"/>
+     <file name="doc\img\step_05.gif" date="1045922566"/>
+     <file name="doc\img\step_06.gif" date="1045922610"/>
+     <file name="doc\img\step_07.gif" date="1045922642"/>
+     <file name="doc\img\step_08.gif" date="1045922662"/>
+     <file name="doc\img\step_09.gif" date="1045922796"/>
+     <file name="doc\img\step_10.gif" date="1045922886"/>
+     <file name="doc\img\step_11.gif" date="1045922968"/>
+     <file name="doc\img\step_12.gif" date="1045923036"/>
+    </pack>
+    <pack name="k_hist" title="Historia" url="" type="zip" single="1" size="5957">
+     <file name="history\deleted\dir.xml" date="1051566434"/>
+     <file name="history\exported renderer.xsl" date="1052948467"/>
+     <file name="history\messages\dir.xml" date="1051566440"/>
+     <file name="history\queue\all.xml" date="1025401106"/>
+     <file name="history\queue\dir.xml" date="1025035438"/>
+     <file name="history\queue\in.xml" date="1025401102"/>
+     <file name="history\queue\out.xml" date="1025401112"/>
+     <file name="history\sms\dir.xml" date="1051566426"/>
+    </pack>
+  </section>
+  <section name="sPlugins" title="Wtyczki"><info>Wtyczki</info>
+    <pack name="plug_kstyle" title="kStyle" url="" type="gz" new="1">
+     <file name="doc\kStyle.html" date="1053360856" size="966"/>
+     <file name="doc\kstyle_sdk.html" date="1052140141" size="2538"/>
+     <file name="plugins\kstyle.dll" date="1052949946" version="268435456" size="44411"/>
+    </pack>
+    <pack name="plug_kstyle_themes" title="kStyle - zestawy" url="" depends="plug_kstyle" type="zip" single="1" size="102570">
+     <file name="themes\Cube\theme.xml" date="1052560390"/>
+     <file name="themes\default\theme.xml" date="1051777880"/>
+     <file name="themes\high-contrast.xml" date="1052591232"/>
+     <file name="themes\Shine\theme.xml" date="1052948890"/>
+     <file name="themes\trebuchet-dark.xml" date="1052590514"/>
+     <file name="themes\trebuchet-light.xml" date="1052590866"/>
+     <file name="themes\trebuchet-mid.xml" date="1052590248"/>
+     <file name="themes\verdana-big.xml" date="1052585384"/>
+     <file name="themes\verdana-medium.xml" date="1052585332"/>
+     <file name="themes\verdana-small.xml" date="1052585186"/>
+     <file name="themes\xmas\theme.xml" date="1051800666"/>
+    </pack>
+    <pack name="plug_expimp" title="exPiMP" url="" type="gz" new="1">
+     <file name="doc\exPiMP.html" date="1053360853" size="878"/>
+     <file name="plugins\exPIMP.dll" date="1052949951" version="268435456" size="49226"/>
+    </pack>
+    <pack name="plug_gg" title="GG" url="" type="gz">
+     <file name="libgaduw32.dll" date="1052932819" size="26336"/>
+     <file name="plugins\gg.dll" date="1052948823" version="269488128" size="32795"/>
+    </pack>
+    <pack name="plug_klan" title="kLAN" url="" type="gz" new="1">
+     <file name="doc\img\klan_logo.gif" date="1044663574" size="3657"/>
+     <file name="doc\kLAN.html" date="1053360849" size="3217"/>
+     <file name="plugins\kLAN.dll" date="1052948816" version="2097152" size="45000"/>
+    </pack>
+    <pack name="plug_sms" title="SMS" url="" type="gz">
+     <file name="doc\readme_1rstwap.txt" date="1040869216" size="714"/>
+     <file name="doc\sms_bramki.html" date="1052262476" size="7411"/>
+     <file name="plugins\sms.dll" date="1052950336" version="275775488" size="63861"/>
+     <file name="sms\1stwap.ico" date="1040860318" size="3060"/>
+     <file name="sms\1stwap.lua" date="1052560342" size="2227"/>
+     <file name="sms\1stwap.xml" date="1052254864" size="651"/>
+     <file name="sms\const.lua" date="1045789194" size="3993"/>
+     <file name="sms\era.ico" date="1035731286" size="4547"/>
+     <file name="sms\era.lua" date="1046828426" size="1208"/>
+     <file name="sms\era.xml" date="1046828704" size="308"/>
+     <file name="sms\idea.ico" date="1035736610" size="2392"/>
+     <file name="sms\idea.lua" date="1046827620" size="1881"/>
+     <file name="sms\idea.xml" date="1046828746" size="366"/>
+     <file name="sms\pf.ico" date="1035761346" size="1410"/>
+     <file name="sms\pf.lua" date="1046828548" size="1345"/>
+     <file name="sms\pf.xml" date="1046828788" size="477"/>
+     <file name="sms\plus.ico" date="1035735794" size="1612"/>
+     <file name="sms\plus.lua" date="1046828618" size="972"/>
+     <file name="sms\plus.xml" date="1046828816" size="349"/>
+    </pack>
+    <pack name="plug_sound" title="sound" url="" type="gz">
+     <file name="plugins\sound.dll" date="1052948819" version="269484032" size="36356"/>
+     <file name="sounds\default.xml" date="1034546880" size="350"/>
+     <file name="sounds\msgsent.wav" date="1030752248" size="7283"/>
+     <file name="sounds\newmsg.wav" date="1030752244" size="9073"/>
+     <file name="sounds\newmsg_act.wav" date="1030752240" size="3703"/>
+     <file name="sounds\newmsg_inact.wav" date="1030752238" size="5539"/>
+     <file name="sounds\newserverevent.wav" date="1030752234" size="19960"/>
+     <file name="sounds\newuser.wav" date="1030752218" size="7033"/>
+     <file name="sounds\quickevent.wav" date="1030752212" size="3592"/>
+    </pack>
+  </section>
+  <section name="sLibs" title="Biblioteki"><info>Wymagane biblioteki</info>
+    <pack name="lib_devil" title="Biblioteki obrazu" url="" type="gz">
+     <file name="devil.dll" date="1051219724" version="1073157" size="136139"/>
+     <file name="ilu.dll" date="1027087562" version="1073157" size="21133"/>
+     <file name="ilut.dll" date="1027087602" version="1073157" size="9739"/>
+    </pack>
+    <pack name="lib_luaplus" title="Silnik skryptowy LuaPlus" url="" type="gz">
+     <file name="luaplus.dll" date="1046953738" size="96352"/>
+    </pack>
+  </section>
+</sections></update>
