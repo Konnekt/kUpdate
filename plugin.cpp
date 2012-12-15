@@ -76,9 +76,9 @@ unsigned int __stdcall ConnectThreadProc(ConnectThreadPack * pack) {
 				setting += UIActionCfgGetValue(sUIAction(kUpdate::IMIA::gCfgCentrals, kUpdate::CFG::userCentrals | IMIB_CFG), 0, 0);
 			}
 		} else {
-			setting = GETSTR(kUpdate::CFG::centrals);
+			setting = getCfgString(kUpdate::CFG::centrals);
 			if (ShowBits::checkLevel(ShowBits::levelAdvanced)) {
-				setting += GETSTR(kUpdate::CFG::userCentrals);
+				setting += getCfgString(kUpdate::CFG::userCentrals);
 			}
 		}
 
@@ -107,7 +107,7 @@ unsigned int __stdcall ConnectThreadProc(ConnectThreadPack * pack) {
 			static bool oneAtATime = true;
 			if (oneAtATime) {
 				oneAtATime = false;
-				SETSTR(CFG::centrals , CentralList::serialize());
+				setCfgString(CFG::centrals , CentralList::serialize());
 				ConnectThreadProc(pack);
 				oneAtATime = true;
 			}
@@ -172,7 +172,7 @@ unsigned int __stdcall ConnectThreadProc(ConnectThreadPack * pack) {
 			}
 			CStdString hdrs = "Content-Type: application/x-www-form-urlencoded";
 			CStdString serverId = centralUrl.substr(7 , centralUrl.find('/' , 8)-7);
-			CStdString lastID = GetExtParam(GETSTR(CFG::lastID) , central->first);
+			CStdString lastID = GetExtParam(getCfgString(CFG::lastID) , central->first);
 			if (globalID.length() > maxIdSize) {
 				globalID = "";
 			}
@@ -358,7 +358,7 @@ unsigned int __stdcall ConnectThreadProc(ConnectThreadPack * pack) {
 				}
 			}
 
-			SETSTR(CFG::lastID , SetExtParam(GETSTR(CFG::lastID) , central->first , lastID).c_str());
+			setCfgString(CFG::lastID , SetExtParam(getCfgString(CFG::lastID) , central->first , lastID).c_str());
 		} catch (ExceptionInternet& e) {
 			IMLOG("!Wyst¹pi³ b³¹d sieci (%s) - %s - %s!" , title.c_str() , e.getReason().c_str());
 			netFailed++;
@@ -391,7 +391,7 @@ unsigned int __stdcall ConnectThreadProc(ConnectThreadPack * pack) {
 		if (pack->force) {
 			if (!count) ICMessage(IMI_INFORM , (int)"Nie ma dla Ciebie ¿adnych informacji!");
 		}
-		SETSTR(CFG::lastCheck , getCheck().c_str());
+		setCfgString(CFG::lastCheck , getCheck().c_str());
 		if (updates.size())
 			new cUpdate(pack->force, updates, (pack->request.empty() || pack->request == "CHECK"));
 		sMESSAGESELECT ms(NET_UPDATE);
@@ -416,7 +416,7 @@ void checkUpdate(bool force = false , CStdString request = "", bool fetchFromSet
 	__int64 diff = 0; // ró¿nica w SEKUNDACH
     if (!force) {
 		/* Sprawdzamy, czy automat powinien siê odpaliæ w ogóle... */
-		if (!GETINT(kUpdate::CFG::checkInterval)/* || (GETINT(kUpdate::CFG::checkAtStart) && getCheck() == GETSTR(CFG::lastCheck))*/)
+		if (!GETINT(kUpdate::CFG::checkInterval)/* || (GETINT(kUpdate::CFG::checkAtStart) && getCheck() == getCfgString(CFG::lastCheck))*/)
 			return;
 		/* Ile czasu up³ynê³o? */
 		diff = _time64(0) - Ctrl->DTgetInt64(DTCFG , 0 , kUpdate::CFG::lastCheckTime);

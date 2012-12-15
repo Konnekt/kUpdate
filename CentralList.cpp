@@ -34,8 +34,8 @@ void CentralList::loadList() {
 	UIActionAdd(CentralList::actionGroup , 0 , ACTT_GROUPEND , "");
 
 	// po za³adowaniu trzeba odœwie¿yæ ustawienie...
-	unserialize(GETSTR(kUpdate::CFG::centrals));
-	SETSTR(kUpdate::CFG::centrals, serialize());
+	unserialize(getCfgString(kUpdate::CFG::centrals));
+	setCfgString(kUpdate::CFG::centrals, serialize());
 
 
 }
