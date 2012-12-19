@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<setting>
+
+	<kupdate>
+	<central>
+		<item name="Centralka www.konnekt.info" title="www.konnekt.info" url="http://update.konnekt.info/update/central.xml?nopost=1" default="1" required="1" main="1">
+		<info></info>
+		<option name="main" sendAlways="1" default="1" title="Podstawowe aktualizacje" main="1">
+		<info>Aktualizacje oficjalnych wtyczek i dodatków</info></option>
+		<option name="kplugins" sendAlways="1" default="1" title="Dodatkowe wtyczki" main="1">
+		<info>Dodatkowe wtyczki</info></option>
+		<option name="addons" sendAlways="1" default="1" title="Style, dźwięki, bramki sms i inne dodatki" main="1">
+		<info>Dodatki do wtyczek</info></option>
+		<option name="beta" title="Uaktualnienia Beta (testowe)" level="15">
+		<info>Testowe wersje wtyczek. Uwaga! Mogą być niestabilne! Polecane tylko zaawansowanym użytkownikom.</info></option>
+		<option name="sdk" title="Pliki dla autorów wtyczek">
+		<info>Dokumentacja API, nagłówki, przykłady</info></option>
+		</item>
+		<item name="Centralka www.wiadomosc.info" url="http://wiadomosc.info/index.php?mod=kupdate">
+		<info>Katalogu strony www.wiadomosc.info. Zawiera mnóstwo dodatków stworzonych przez użytkowników.</info>
+		</item>
+	</central>
+	</kupdate>
+
+</setting>
