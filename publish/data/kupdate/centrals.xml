@@ -11,13 +11,6 @@
 		<info>Dodatkowe wtyczki</info></option>
 		<option name="addons" sendAlways="1" default="1" title="Style, dŸwiêki, bramki sms i inne dodatki" main="1">
 		<info>Dodatki do wtyczek</info></option>
-		<option name="beta" title="Uaktualnienia Beta (testowe)" level="15">
-		<info>Testowe wersje wtyczek. Uwaga! Mog¹ byæ niestabilne! Polecane tylko zaawansowanym u¿ytkownikom.</info></option>
-		<option name="sdk" title="Pliki dla autorów wtyczek">
-		<info>Dokumentacja API, nag³ówki, przyk³ady</info></option>
-		</item>
-		<item name="Centralka www.wiadomosc.info" url="http://wiadomosc.info/index.php?mod=kupdate">
-		<info>Katalogu strony www.wiadomosc.info. Zawiera mnóstwo dodatków stworzonych przez u¿ytkowników.</info>
 		</item>
 	</central>
 	</kupdate>
